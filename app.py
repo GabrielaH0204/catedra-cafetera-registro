@@ -310,9 +310,13 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .sec-t{font-size:34px;font-weight:600;margin:30px 0 6px;color:var(--ink);letter-spacing:-.3px}
 .sec-p{font-size:17px;color:var(--ink2) !important;margin-bottom:22px}
 .pk{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 26px 20px;min-height:860px;margin-bottom:12px;position:relative;display:flex;flex-direction:column}
-.pk.sel{border-color:var(--accent);box-shadow:inset 0 3px 0 var(--accent)}
-.pk .badge{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--accent) !important}
-.pk.prem .badge{color:var(--gold) !important}
+.pk{border-top:5px solid var(--c) !important;background:var(--t) !important}
+.pk.c-inm{--c:#8a3b1e;--t:#fbf0e8;--l:#ecd3c3}
+.pk.c-campo{--c:#2f5d3a;--t:#edf3ea;--l:#cddfc8}
+.pk.c-prem{--c:#a57c3c;--t:#f8efdf;--l:#e7d3ae}
+.pk.sel{border:2px solid var(--c) !important;border-top-width:5px !important;box-shadow:0 0 0 4px rgba(42,29,21,.06),0 14px 30px rgba(42,29,21,.14)}
+.pk .badge{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--c) !important}
+
 .pk .ic{font-family:'Source Serif 4',Georgia,serif !important;font-size:15px;color:var(--mute) !important;margin:16px 0 2px;font-style:italic}
 .pk h3{font-size:26px;margin:0 0 4px;min-height:64px;font-weight:600;letter-spacing:-.2px}
 .pk .for{font-size:15px;color:var(--ink2) !important}
@@ -321,11 +325,11 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .pk .meta{display:flex;flex-direction:column;gap:2px;margin:14px 0 4px;font-size:14px;color:var(--ink2)}
 .chip{font-size:14.5px;color:var(--ink2) !important}
 .chip:last-child{border-right:none}
-.pk ul{list-style:none;padding:0;margin:16px 0 6px;border-top:1px solid var(--line)}
-.pk li{font-size:14.5px;line-height:1.45;padding:7px 0 7px 24px;position:relative;border-bottom:1px solid #f0eae1}
+.pk ul{list-style:none;padding:0;margin:16px 0 6px;border-top:1px solid var(--l)}
+.pk li{font-size:14.5px;line-height:1.45;padding:7px 0 7px 24px;position:relative;border-bottom:1px solid var(--l)}
 .pk li:last-child{border-bottom:none}
-.pk li:before{content:"✓";position:absolute;left:2px;top:7px;font-weight:700;color:var(--leaf)}
-.impact{margin-top:auto;border-left:3px solid var(--leaf);background:#f3f6f1;padding:10px 14px;font-size:14px;color:#2c4a31 !important}
+.pk li:before{content:"✓";position:absolute;left:2px;top:7px;font-weight:700;color:var(--c)}
+.impact{margin-top:auto;border-left:3px solid var(--leaf);background:rgba(255,255,255,.8);border-radius:0 6px 6px 0;padding:10px 14px;font-size:14px;color:#2c4a31 !important}
 .impact b{color:var(--leaf) !important;font-size:16px}
 .soon{border-radius:12px;padding:22px 26px;margin-top:18px;border:1px solid var(--line);background:var(--sand);display:flex;align-items:center;justify-content:space-between;gap:18px}
 .soon b{font-family:'Source Serif 4',Georgia,serif !important;font-size:20px;font-weight:600}
@@ -463,7 +467,7 @@ if ss.step == 1:
             prem = " prem" if k == "prem" else ""
             per = t("per_trav") if p["kind"] == "trav" else t("per_pax")
             lis = "".join(f"<li>{x}</li>" for x in t("inc_" + k))
-            H(f"""<div class="pk{sel}{prem}">
+            H(f"""<div class="pk c-{k}{sel}{prem}">
 <span class="badge">{t('badge_' + k)}</span>
 <div class="ic">{t('prog')} {['inm', 'campo', 'prem'].index(k) + 1:02d}</div>
 <h3>{t('name_' + k)}</h3><div class="for">{t('for_' + k)}</div>
