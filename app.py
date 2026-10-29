@@ -2,11 +2,16 @@
 """Cátedra Cafetera: el territorio como aula.
 Prototipo (mock) de la página de registro. Proyecto académico Strategy in Action · Grupo CG-1.
 No procesa pagos ni guarda datos: todo vive en la sesión del navegador."""
+import base64
 import random
 import re
+from pathlib import Path
 from datetime import date, timedelta
 
 import streamlit as st
+
+LOGO_PATH = Path(__file__).parent / "logo_fmm.png"
+LOGO_B64 = base64.b64encode(LOGO_PATH.read_bytes()).decode() if LOGO_PATH.exists() else ""
 
 st.set_page_config(page_title="Cátedra Cafetera · Registro", page_icon="🌿", layout="wide", initial_sidebar_state="collapsed")
 
@@ -260,7 +265,7 @@ def H(s):
 H("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap');
-:root{--paper:#ede3d3;--white:#fffdf9;--sand:#e4d6c1;--ink:#1f1a16;--ink2:#54483e;--mute:#7c6f63;--line:#d9cab3;--shadow:0 1px 2px rgba(42,29,21,.06),0 8px 22px rgba(42,29,21,.08);--coffee:#2a1d15;--accent:#8a3b1e;--accent2:#6f2f17;--leaf:#2f5d3a;--gold:#b08a4f;}
+:root{--paper:#f5e4c6;--white:#fffdf9;--sand:#ecd8b8;--ink:#1f1a16;--ink2:#54483e;--mute:#7c6f63;--line:#d9cab3;--shadow:0 1px 2px rgba(42,29,21,.06),0 8px 22px rgba(42,29,21,.08);--coffee:#2a1d15;--accent:#8a3b1e;--accent2:#6f2f17;--leaf:#2f5d3a;--gold:#b08a4f;}
 html, body, .stApp, .stMarkdown, button, input, textarea, select, label, p, li{font-family:'Source Sans 3',-apple-system,'Segoe UI',sans-serif !important;}
 [data-testid="stIconMaterial"], .material-symbols-rounded{font-family:'Material Symbols Rounded' !important;}
 .stApp{background:var(--paper);}
@@ -272,9 +277,10 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .demo{background:var(--white);color:var(--ink2) !important;text-align:center;font-size:13px;padding:7px 12px;margin:12px 0 0;border:1px solid var(--line);border-radius:4px}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0 18px;margin-bottom:6px}
 .logo{display:flex;align-items:center;gap:16px}
+.logo .lg{height:86px;width:auto;display:block}
 .logo .by{font-size:11px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--mute) !important;line-height:1.3}
 .logo .by b{display:block;color:var(--ink) !important;font-size:13px;letter-spacing:1.2px}
-.logo .sep{width:1px;height:38px;background:var(--line)}
+.logo .sep{width:1px;height:52px;background:var(--line)}
 .logo .t1{font-family:'Source Serif 4',Georgia,serif !important;font-size:26px;font-weight:600;color:var(--ink);line-height:1;letter-spacing:-.2px}
 .logo .t2{font-size:13px;color:var(--ink2) !important;margin-top:4px}
 .hero{border-radius:4px;padding:64px 64px 52px;background:var(--coffee);border-top:4px solid var(--gold)}
@@ -421,7 +427,8 @@ div[data-testid="stExpander"]{background:var(--white);border-radius:4px;border:1
 H(f'<div class="demo">{t("demo")}</div>')
 c1, c2 = st.columns([4, 1.3], vertical_alignment="center")
 with c1:
-    H(f"""<div class="nav"><div class="logo"><div class="by">{t('by')}<b>Fundación Manuel Mejía</b></div><div class="sep"></div><div><div class="t1">Cátedra Cafetera</div><div class="t2">{t('nav_by')}</div></div></div></div>""")
+    mark = f'<img class="lg" src="data:image/png;base64,{LOGO_B64}" alt="Fundación Manuel Mejía">' if LOGO_B64 else f'<div class="by">{t("by")}<b>Fundación Manuel Mejía</b></div>'
+    H(f"""<div class="nav"><div class="logo">{mark}<div class="sep"></div><div><div class="t1">Cátedra Cafetera</div><div class="t2">{t('nav_by')}</div></div></div></div>""")
 with c2:
     lang = st.radio("Idioma", ["Español", "English"], index=0 if ss.lang == "es" else 1, horizontal=True, label_visibility="collapsed")
     if (lang == "English") != (ss.lang == "en"):
@@ -671,7 +678,8 @@ else:
             ss.step, ss.form, ss.code = 1, {}, ""
             st.rerun()
 
-H(f"""<div class="foot"><div><div class="ft">{t('f_t')}</div><div class="fx">{t('f_x')}</div></div>
+flogo = f'<img src="data:image/png;base64,{LOGO_B64}" alt="" style="height:58px;width:auto;margin-bottom:12px;display:block">' if LOGO_B64 else ""
+H(f"""<div class="foot"><div>{flogo}<div class="ft">{t('f_t')}</div><div class="fx">{t('f_x')}</div></div>
 <div><div class="fh">{t('f_h1')}</div><div class="fx">{t('f_x1')}</div></div>
 <div><div class="fh">{t('f_h2')}</div><div class="fx">{t('f_x2')}</div></div></div>
 <div class="legal">{t('foot')}</div>""")
