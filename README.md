@@ -10,9 +10,14 @@ La app no procesa pagos ni guarda datos: todo vive en la sesión del navegador.
 ```
 app.py
 requirements.txt
+logo_fmm.png
+paisaje.jpg
+sede.jpg
 .streamlit/config.toml
 README.md
 ```
+
+Las tres imágenes van en la misma carpeta que `app.py`, con esos nombres exactos.
 
 ## Despliegue en Streamlit Community Cloud
 
