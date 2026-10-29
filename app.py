@@ -8,7 +8,7 @@ from datetime import date, timedelta
 
 import streamlit as st
 
-st.set_page_config(page_title="Cátedra Cafetera · Registro", page_icon="☕", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Cátedra Cafetera · Registro", page_icon="🌿", layout="wide", initial_sidebar_state="collapsed")
 
 # ---------------------------------------------------------------------------
 # Datos (los mismos del modelo financiero del grupo)
@@ -34,6 +34,16 @@ PKGS = {
 # ---------------------------------------------------------------------------
 T = {
     "es": {
+        "by": "Un programa de la", "comp_short": "profesor(es) acompañante(s)",
+        "prog": "Programa",
+        "fmm_k": "Quiénes somos",
+        "fmm_t": "Más de 60 años educando al sector cafetero colombiano",
+        "fmm_p": "La Fundación Manuel Mejía ha acompañado a los caficultores colombianos y a sus comunidades desde su sede educativa en Chinchiná, en el corazón del Paisaje Cultural Cafetero. La Cátedra Cafetera abre ese conocimiento a universidades y viajeros de todo el mundo.",
+        "facts": [("+700.000", "caficultores acompañados en más de 60 años"), ("19.406", "estudiantes formados en 2025"), ("46.886", "matrículas en 2025"), ("4,8 / 5", "satisfacción promedio de 15.731 participantes")],
+        "fmm_src": "Fuente: Fundación Manuel Mejía, Informe de Gestión 2025.",
+        "f_t": "Fundación Manuel Mejía", "f_x": "Sede educativa en Chinchiná, Caldas, Colombia. Educación para el sector cafetero desde hace más de 60 años.",
+        "f_h1": "La Cátedra", "f_x1": "Inmersión cafetera · Programa de campo · Experiencia premium · Semestre con créditos (próximamente)",
+        "f_h2": "Con el conocimiento de", "f_x2": "Caficultores de Chinchiná como docentes y expertos de Cenicafé.",
         "demo": "Prototipo académico · no procesa pagos ni guarda datos",
         "nav_by": "Fundación Manuel Mejía · Chinchiná, Caldas",
         "hero_kick": "Programas inmersivos en el Paisaje Cultural Cafetero",
@@ -109,6 +119,16 @@ T = {
         "to": "al", "persons": "personas", "free": "sin costo", "countries": ["Estados Unidos", "Países Bajos", "Canadá", "Reino Unido", "Alemania", "España", "Colombia", "Otro"],
     },
     "en": {
+        "by": "A program by", "comp_short": "accompanying faculty",
+        "prog": "Program",
+        "fmm_k": "Who we are",
+        "fmm_t": "Over 60 years educating Colombia's coffee sector",
+        "fmm_p": "Fundación Manuel Mejía has supported Colombian coffee growers and their communities from its campus in Chinchiná, in the heart of the Coffee Cultural Landscape. The Cátedra Cafetera opens that knowledge to universities and travelers from around the world.",
+        "facts": [("700,000+", "coffee growers supported over 60 years"), ("19,406", "students trained in 2025"), ("46,886", "course enrollments in 2025"), ("4.8 / 5", "average satisfaction from 15,731 participants")],
+        "fmm_src": "Source: Fundación Manuel Mejía, 2025 Management Report.",
+        "f_t": "Fundación Manuel Mejía", "f_x": "Campus in Chinchiná, Caldas, Colombia. Education for the coffee sector for over 60 years.",
+        "f_h1": "The Cátedra", "f_x1": "Coffee immersion · Field program · Premium experience · Semester with credits (coming soon)",
+        "f_h2": "With the knowledge of", "f_x2": "Chinchiná coffee growers as teachers and the experts of Cenicafé.",
         "demo": "Academic prototype · no payments are processed and no data is stored",
         "nav_by": "Fundación Manuel Mejía · Chinchiná, Colombia",
         "hero_kick": "Immersive programs in Colombia's Coffee Cultural Landscape",
@@ -227,119 +247,132 @@ def H(s):
 # ---------------------------------------------------------------------------
 H("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lilita+One&display=swap');
-:root{--ink:#4a2512;--ink2:#7b5a45;--rust:#b4512b;--tan:#c9a46a;--brown:#7b3f1d;--green:#3d7a3a;--bg:#f7efe2;--card:#fdf9f2;--line:#e5d3b6;}
-html, body, [class*="css"], .stApp, .stMarkdown, button, input, textarea, select {font-family:'Poppins',sans-serif !important;}
-.stApp{background:var(--bg);}
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+:root{--paper:#fbf8f3;--white:#ffffff;--sand:#f1e9dd;--ink:#1f1a16;--ink2:#5f544b;--mute:#8a7e73;--line:#e4dccf;--coffee:#2a1d15;--accent:#8a3b1e;--accent2:#6f2f17;--leaf:#2f5d3a;--gold:#b08a4f;}
+html, body, .stApp, .stMarkdown, button, input, textarea, select, label, p, li, span, div{font-family:'Source Sans 3',-apple-system,'Segoe UI',sans-serif !important;}
+.stApp{background:var(--paper);}
 #MainMenu, footer, header[data-testid="stHeader"]{visibility:hidden;height:0;}
-.block-container{padding-top:1.2rem;padding-bottom:3rem;max-width:1240px;}
-h1,h2,h3,h4{color:var(--ink);font-family:'Poppins',sans-serif !important;}
+.block-container{padding-top:0;padding-bottom:3rem;max-width:1180px;}
 p, li, label, span, div{color:var(--ink);}
-.demo{background:var(--ink);color:#f7efe2 !important;text-align:center;font-size:13px;padding:7px 12px;border-radius:999px;margin:0 auto 14px;width:fit-content;letter-spacing:.3px}
-.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.logo{display:flex;align-items:center;gap:12px}
-.logo .mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--rust),var(--brown));display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 6px 16px rgba(123,63,29,.25)}
-.logo .t1{font-family:'Lilita One',sans-serif !important;font-size:24px;color:var(--ink);line-height:1}
-.logo .t2{font-size:12.5px;color:var(--ink2);margin-top:3px}
-.hero{position:relative;overflow:hidden;border-radius:28px;padding:56px 56px 48px;background:radial-gradient(1200px 400px at 85% -10%,rgba(201,164,106,.35),transparent 60%),linear-gradient(135deg,#3a1c0d 0%,#4a2512 45%,#7b3f1d 100%);box-shadow:0 20px 50px rgba(74,37,18,.25)}
-.hero *{color:#f7efe2}
-.hero .kick{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--tan) !important;font-weight:600}
-.hero h1{font-family:'Lilita One',sans-serif !important;font-size:64px;line-height:1.02;margin:14px 0 16px;color:#fdf9f2 !important;font-weight:400}
-.hero h1 em{font-style:normal;color:var(--tan) !important}
-.hero p{font-size:18px;max-width:640px;line-height:1.6;color:#ecdcc4 !important}
-.hstats{display:flex;gap:16px;margin-top:30px;flex-wrap:wrap}
-.hstat{background:rgba(253,249,242,.08);border:1px solid rgba(253,249,242,.18);border-radius:18px;padding:14px 20px;backdrop-filter:blur(4px)}
-.hstat b{display:block;font-size:22px;color:#fdf9f2 !important}
-.hstat span{font-size:13px;color:#e3c79a !important}
-.bean{position:absolute;right:46px;top:40px;opacity:.9}
-.stepper{display:flex;gap:10px;margin:30px 0 8px;flex-wrap:wrap}
-.st{flex:1;min-width:150px;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:16px;background:var(--card);border:1.5px solid var(--line);font-size:14px;font-weight:500;color:var(--ink2)}
-.st .n{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--line);color:var(--ink);font-weight:600;font-size:13px;flex:none}
-.st.on{border-color:var(--rust);background:#fff7ef;color:var(--ink)}
-.st.on .n{background:var(--rust);color:#fff !important}
-.st.done .n{background:var(--green);color:#fff !important}
-.sec-t{font-size:32px;font-weight:600;margin:26px 0 4px;color:var(--ink)}
-.sec-p{font-size:16px;color:var(--ink2) !important;margin-bottom:18px}
-.pk{background:var(--card);border:1.5px solid var(--line);border-radius:24px;padding:26px 24px 18px;min-height:780px;margin-bottom:12px;transition:all .2s ease;position:relative;box-shadow:0 6px 20px rgba(74,37,18,.06)}
-.pk:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(74,37,18,.12)}
-.pk.sel{border:2px solid var(--rust);box-shadow:0 14px 34px rgba(180,81,43,.18)}
-.pk .badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.4px;padding:5px 12px;border-radius:999px;background:#f3e3cc;color:var(--brown) !important}
-.pk.prem .badge{background:var(--ink);color:#e3c79a !important}
-.pk .ic{font-size:34px;margin:14px 0 4px}
-.pk h3{font-size:24px;margin:2px 0 2px;font-weight:600}
-.pk .for{font-size:14px;color:var(--ink2) !important}
-.pk .price{font-size:40px;font-weight:700;color:var(--ink);margin-top:16px;line-height:1}
-.pk .price small{font-size:14px;font-weight:500;color:var(--ink2) !important}
-.pk .meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 6px}
-.chip{font-size:12.5px;font-weight:500;padding:5px 11px;border-radius:999px;background:#f3e8d7;color:var(--ink) !important}
-.pk ul{list-style:none;padding:0;margin:14px 0 6px}
-.pk li{font-size:14px;line-height:1.45;padding:6px 0 6px 28px;position:relative;border-bottom:1px dashed var(--line)}
+.serif, h1, h2, h3, h4, .sec-t{font-family:'Source Serif 4',Georgia,serif !important;}
+h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
+.demo{background:var(--sand);color:var(--ink2) !important;text-align:center;font-size:13px;padding:7px 12px;margin:12px 0 0;border:1px solid var(--line);border-radius:4px}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0 18px;margin-bottom:6px}
+.logo{display:flex;align-items:center;gap:16px}
+.logo .by{font-size:11px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--mute) !important;line-height:1.3}
+.logo .by b{display:block;color:var(--ink) !important;font-size:13px;letter-spacing:1.2px}
+.logo .sep{width:1px;height:38px;background:var(--line)}
+.logo .t1{font-family:'Source Serif 4',Georgia,serif !important;font-size:26px;font-weight:600;color:var(--ink);line-height:1;letter-spacing:-.2px}
+.logo .t2{font-size:13px;color:var(--ink2) !important;margin-top:4px}
+.hero{border-radius:4px;padding:64px 64px 52px;background:var(--coffee);border-top:4px solid var(--gold)}
+.hero *{color:#f4ede3}
+.hero .kick{font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#cfb489 !important}
+.hero h1{font-family:'Source Serif 4',Georgia,serif !important;font-size:58px;line-height:1.05;margin:16px 0 18px;color:#fbf8f3 !important;font-weight:600;letter-spacing:-.8px}
+.hero h1 em{font-style:italic;font-weight:400;color:#e2cba4 !important}
+.hero p{font-size:19px;max-width:680px;line-height:1.6;color:#e6dccd !important}
+.hstats{display:flex;gap:0;margin-top:36px;flex-wrap:wrap;border-top:1px solid rgba(244,237,227,.18);padding-top:22px}
+.hstat{padding:0 34px 0 0;margin-right:34px;border-right:1px solid rgba(244,237,227,.18)}
+.hstat:last-child{border-right:none}
+.hstat b{display:block;font-family:'Source Serif 4',Georgia,serif !important;font-size:24px;font-weight:600;color:#fbf8f3 !important}
+.hstat span{font-size:14px;color:#cfc2b0 !important}
+.fmm{display:grid;grid-template-columns:1.25fr 2fr;gap:48px;padding:44px 0 40px;border-bottom:1px solid var(--line)}
+.fmm .k{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent) !important}
+.fmm h3{font-size:28px;line-height:1.2;margin:10px 0 12px;font-weight:600;color:var(--ink)}
+.fmm p{font-size:16px;line-height:1.6;color:var(--ink2) !important}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.fact{padding:20px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.fact b{display:block;font-family:'Source Serif 4',Georgia,serif !important;font-size:34px;font-weight:600;color:var(--ink);line-height:1.1}
+.fact span{font-size:14.5px;color:var(--ink2) !important}
+.fsrc{font-size:12.5px;color:var(--mute) !important;margin-top:10px}
+.stepper{display:flex;gap:0;margin:38px 0 6px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.st{flex:1;min-width:150px;display:flex;align-items:center;gap:10px;padding:12px 4px 14px;font-size:15px;font-weight:500;color:var(--mute);border-bottom:3px solid transparent;margin-bottom:-1px}
+.st .n{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--line);color:var(--mute);font-weight:600;font-size:13px;flex:none;background:var(--white)}
+.st.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+.st.on .n{background:var(--accent);border-color:var(--accent);color:#fff !important}
+.st.done{color:var(--ink2)}
+.st.done .n{background:var(--leaf);border-color:var(--leaf);color:#fff !important}
+.sec-t{font-size:34px;font-weight:600;margin:30px 0 6px;color:var(--ink);letter-spacing:-.3px}
+.sec-p{font-size:17px;color:var(--ink2) !important;margin-bottom:22px}
+.pk{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:28px 26px 20px;min-height:860px;margin-bottom:12px;position:relative;display:flex;flex-direction:column}
+.pk.sel{border-color:var(--accent);box-shadow:inset 0 3px 0 var(--accent)}
+.pk .badge{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--accent) !important}
+.pk.prem .badge{color:var(--gold) !important}
+.pk .ic{font-family:'Source Serif 4',Georgia,serif !important;font-size:15px;color:var(--mute) !important;margin:16px 0 2px;font-style:italic}
+.pk h3{font-size:26px;margin:0 0 4px;min-height:64px;font-weight:600;letter-spacing:-.2px}
+.pk .for{font-size:15px;color:var(--ink2) !important}
+.pk .price{font-size:36px;font-weight:700;color:var(--ink);margin-top:20px;line-height:1;letter-spacing:-.5px}
+.pk .price small{display:block;font-size:15px;font-weight:400;color:var(--ink2) !important;letter-spacing:0;margin-top:6px}
+.pk .meta{display:flex;flex-direction:column;gap:2px;margin:14px 0 4px;font-size:14px;color:var(--ink2)}
+.chip{font-size:14.5px;color:var(--ink2) !important}
+.chip:last-child{border-right:none}
+.pk ul{list-style:none;padding:0;margin:16px 0 6px;border-top:1px solid var(--line)}
+.pk li{font-size:14.5px;line-height:1.45;padding:7px 0 7px 24px;position:relative;border-bottom:1px solid #f0eae1}
 .pk li:last-child{border-bottom:none}
-.pk li:before{content:"";position:absolute;left:2px;top:9px;width:16px;height:16px;border-radius:50%;background:var(--green);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8'/%3E%3C/svg%3E");}
-.pk li:after{content:"";position:absolute;left:7px;top:12px;width:5px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
-.impact{margin-top:12px;background:#eef4ea;border-radius:14px;padding:10px 14px;font-size:13px;color:#2f5e2c !important}
-.impact b{color:var(--green) !important;font-size:15px}
-.soon{border-radius:24px;padding:22px 26px;margin-top:18px;border:1.5px dashed var(--tan);display:flex;align-items:center;justify-content:space-between;gap:18px;background:repeating-linear-gradient(135deg,transparent,transparent 12px,rgba(201,164,106,.08) 12px,rgba(201,164,106,.08) 24px)}
-.soon b{font-size:18px}
-.soon span.p{font-size:14px;color:var(--ink2) !important}
-.soon .tag{font-size:12px;font-weight:600;padding:6px 14px;border-radius:999px;background:var(--tan);color:var(--ink) !important;white-space:nowrap}
-.panel{background:var(--card);border:1.5px solid var(--line);border-radius:24px;padding:28px 28px 22px;box-shadow:0 6px 20px rgba(74,37,18,.06)}
-.sum{background:linear-gradient(160deg,#4a2512,#6a3417);border-radius:24px;padding:28px;box-shadow:0 18px 40px rgba(74,37,18,.25)}
-.sum *{color:#f7efe2 !important}
-.sum .lbl{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--tan) !important;font-weight:600}
-.sum h4{font-size:22px;margin:8px 0 2px;color:#fdf9f2 !important}
-.sum .d{font-size:14px;color:#e3c79a !important}
-.sum .tot{font-size:46px;font-weight:700;line-height:1;margin:18px 0 4px}
-.sum .row{display:flex;justify-content:space-between;font-size:14px;padding:9px 0;border-bottom:1px solid rgba(253,249,242,.14)}
+.pk li:before{content:"✓";position:absolute;left:2px;top:7px;font-weight:700;color:var(--leaf)}
+.impact{margin-top:auto;border-left:3px solid var(--leaf);background:#f3f6f1;padding:10px 14px;font-size:14px;color:#2c4a31 !important}
+.impact b{color:var(--leaf) !important;font-size:16px}
+.soon{border-radius:6px;padding:22px 26px;margin-top:18px;border:1px solid var(--line);background:var(--sand);display:flex;align-items:center;justify-content:space-between;gap:18px}
+.soon b{font-family:'Source Serif 4',Georgia,serif !important;font-size:20px;font-weight:600}
+.soon span.p{font-size:15px;color:var(--ink2) !important}
+.soon .tag{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--ink2) !important;white-space:nowrap;border:1px solid var(--ink2);padding:6px 12px;border-radius:3px}
+.sum{background:var(--coffee);border-radius:6px;padding:28px 30px;border-top:4px solid var(--gold)}
+.sum *{color:#f4ede3 !important}
+.sum .lbl{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#cfb489 !important;font-weight:600}
+.sum h4{font-family:'Source Serif 4',Georgia,serif !important;font-size:24px;font-weight:600;margin:8px 0 4px;color:#fbf8f3 !important}
+.sum .d{font-size:15px;color:#d9ccb9 !important}
+.sum .tot{font-size:44px;font-weight:700;line-height:1;margin:20px 0 6px;letter-spacing:-.5px}
+.sum .row{display:flex;justify-content:space-between;gap:12px;font-size:15px;padding:10px 0;border-bottom:1px solid rgba(244,237,227,.14)}
 .sum .row:last-child{border-bottom:none}
-.sum .muted{font-size:12px;color:#d9c3a3 !important;margin-top:10px}
-.tl{position:relative;margin:6px 0 0 6px}
-.tl .it{position:relative;padding:0 0 18px 30px;border-left:2px solid var(--line)}
-.tl .it:last-child{border-left:2px solid transparent}
-.tl .it:before{content:"";position:absolute;left:-8px;top:2px;width:14px;height:14px;border-radius:50%;background:var(--rust);border:3px solid var(--bg)}
-.tl .it .k{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--tan) !important}
-.tl .it b{display:block;font-size:17px;margin:2px 0}
-.tl .it span{font-size:14.5px;color:var(--ink2) !important;line-height:1.5}
-.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border-radius:20px;overflow:hidden;border:1.5px solid var(--line)}
-.cmp th{background:var(--ink);color:#fdf9f2 !important;font-weight:600;font-size:15px;padding:14px 16px;text-align:left}
-.cmp td{padding:12px 16px;font-size:14.5px;border-top:1px solid var(--line)}
-.cmp td:first-child{color:var(--ink2) !important;font-weight:500;width:24%}
-.ok{text-align:center;padding:34px 20px 10px}
-.ok .big{width:84px;height:84px;border-radius:50%;margin:0 auto 14px;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:42px;color:#fff !important;box-shadow:0 12px 30px rgba(61,122,58,.35)}
-.ok h2{font-family:'Lilita One',sans-serif !important;font-size:44px;font-weight:400;margin:0}
-.code{display:inline-block;margin-top:12px;font-size:20px;font-weight:600;letter-spacing:3px;background:var(--card);border:1.5px dashed var(--rust);padding:10px 22px;border-radius:14px}
-.foot{text-align:center;font-size:12.5px;color:var(--ink2) !important;margin-top:40px}
+.sum .muted{font-size:12.5px;color:#bfb09c !important;margin-top:12px}
+.tl{position:relative;margin:6px 0 0 4px}
+.tl .it{position:relative;padding:0 0 20px 28px;border-left:1px solid var(--line)}
+.tl .it:last-child{border-left:1px solid transparent}
+.tl .it:before{content:"";position:absolute;left:-5px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.tl .it .k{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--mute) !important}
+.tl .it b{display:block;font-family:'Source Serif 4',Georgia,serif !important;font-size:19px;font-weight:600;margin:2px 0}
+.tl .it span{font-size:15.5px;color:var(--ink2) !important;line-height:1.55}
+.cmp{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line)}
+.cmp th{background:var(--sand);color:var(--ink) !important;font-family:'Source Serif 4',Georgia,serif !important;font-weight:600;font-size:17px;padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.cmp td{padding:12px 16px;font-size:15px;border-top:1px solid #efe8de}
+.cmp td:first-child{color:var(--ink2) !important;font-weight:600;width:24%}
+.ok{text-align:center;padding:40px 20px 10px}
+.ok .big{width:64px;height:64px;border-radius:50%;margin:0 auto 16px;border:2px solid var(--leaf);display:flex;align-items:center;justify-content:center;font-size:30px;color:var(--leaf) !important}
+.ok h2{font-family:'Source Serif 4',Georgia,serif !important;font-size:42px;font-weight:600;margin:0;letter-spacing:-.4px}
+.code{display:inline-block;margin-top:12px;font-size:20px;font-weight:600;letter-spacing:2px;background:var(--white);border:1px solid var(--line);padding:10px 22px;border-radius:4px;font-family:'Source Sans 3',monospace !important}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-top:56px;padding:32px 0 8px;border-top:1px solid var(--line)}
+.foot .ft{font-family:'Source Serif 4',Georgia,serif !important;font-size:19px;font-weight:600;margin-bottom:6px}
+.foot .fx{font-size:14px;line-height:1.6;color:var(--ink2) !important}
+.foot .fh{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--mute) !important;margin-bottom:6px}
+.legal{font-size:12.5px;color:var(--mute) !important;text-align:center;margin-top:24px}
 /* Widgets */
-.stButton>button, .stDownloadButton>button, .stFormSubmitButton>button{border-radius:14px !important;font-weight:600 !important;padding:.62rem 1.2rem !important;border:1.5px solid var(--line) !important;background:var(--card) !important;color:var(--ink) !important;transition:all .15s ease}
-.stButton>button:hover, .stDownloadButton>button:hover{border-color:var(--rust) !important;color:var(--rust) !important}
-.stButton>button[kind="primary"], .stFormSubmitButton>button{background:linear-gradient(135deg,var(--rust),var(--brown)) !important;color:#fff !important;border:none !important;box-shadow:0 8px 20px rgba(180,81,43,.3)}
+.stButton>button, .stDownloadButton>button, .stFormSubmitButton>button{border-radius:4px !important;font-weight:600 !important;font-size:15px !important;padding:.6rem 1.2rem !important;border:1px solid var(--ink2) !important;background:var(--white) !important;color:var(--ink) !important;box-shadow:none !important}
+.stButton>button:hover, .stDownloadButton>button:hover{border-color:var(--accent) !important;color:var(--accent) !important}
+.stButton>button[kind="primary"], .stFormSubmitButton>button{background:var(--accent) !important;color:#fff !important;border:1px solid var(--accent) !important}
 .stButton>button[kind="primary"] p, .stFormSubmitButton>button p{color:#fff !important}
-.stButton>button[kind="primary"]:hover{filter:brightness(1.07);color:#fff !important}
-div[data-baseweb="input"], div[data-baseweb="select"]>div, div[data-baseweb="textarea"]{border-radius:12px !important;background:#fff !important}
-.stTabs [data-baseweb="tab-list"]{gap:8px}
-.stTabs [data-baseweb="tab"]{background:var(--card);border-radius:12px 12px 0 0;padding:10px 18px;font-weight:600}
-div[data-testid="stExpander"]{background:var(--card);border-radius:14px;border:1.5px solid var(--line)}
-@media (max-width: 760px){.hero{padding:34px 24px}.hero h1{font-size:44px}.bean{display:none}.st{min-width:46%}}
+.stButton>button[kind="primary"]:hover, .stFormSubmitButton>button:hover{background:var(--accent2) !important;color:#fff !important}
+div[data-baseweb="input"], div[data-baseweb="select"]>div, div[data-baseweb="textarea"]{border-radius:4px !important;background:#fff !important}
+.stTabs [data-baseweb="tab-list"]{gap:24px;border-bottom:1px solid var(--line)}
+.stTabs [data-baseweb="tab"]{background:transparent;padding:10px 0;font-weight:600;font-size:16px}
+div[data-testid="stExpander"]{background:var(--white);border-radius:4px;border:1px solid var(--line)}
+div[data-testid="stExpander"] summary p{font-size:16px;font-weight:600}
+@media (max-width: 760px){.hero{padding:36px 24px}.hero h1{font-size:40px}.fmm,.foot{grid-template-columns:1fr}.hstat{border-right:none;margin-bottom:12px}.st{min-width:46%}}
 </style>
 """)
 
 # ---------------------------------------------------------------------------
 # Encabezado y héroe
 # ---------------------------------------------------------------------------
-c1, c2 = st.columns([4, 1.3])
+H(f'<div class="demo">{t("demo")}</div>')
+c1, c2 = st.columns([4, 1.3], vertical_alignment="center")
 with c1:
-    H(f"""<div class="nav"><div class="logo"><div class="mark">☕</div><div><div class="t1">Cátedra Cafetera</div><div class="t2">{t('nav_by')}</div></div></div></div>""")
+    H(f"""<div class="nav"><div class="logo"><div class="by">{t('by')}<b>Fundación Manuel Mejía</b></div><div class="sep"></div><div><div class="t1">Cátedra Cafetera</div><div class="t2">{t('nav_by')}</div></div></div></div>""")
 with c2:
     lang = st.radio("Idioma", ["Español", "English"], index=0 if ss.lang == "es" else 1, horizontal=True, label_visibility="collapsed")
     if (lang == "English") != (ss.lang == "en"):
         ss.lang = "en" if lang == "English" else "es"
         st.rerun()
 
-H(f'<div class="demo">⚑ {t("demo")}</div>')
-BEAN = """<svg class="bean" width="170" height="170" viewBox="0 0 170 170"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9a46a"/><stop offset="1" stop-color="#b4512b"/></linearGradient></defs>
-<ellipse cx="85" cy="85" rx="52" ry="72" transform="rotate(32 85 85)" fill="url(#g)" opacity=".9"/>
-<path d="M58 40 C 95 70, 70 105, 112 132" stroke="#4a2512" stroke-width="7" fill="none" stroke-linecap="round" opacity=".55"/></svg>"""
-H(f"""<div class="hero">{BEAN}
+H(f"""<div class="hero">
 <div class="kick">{t('hero_kick')}</div>
 <h1>{t('hero_t1')}<br><em>{t('hero_t2')}</em></h1>
 <p>{t('hero_p')}</p>
@@ -348,6 +381,10 @@ H(f"""<div class="hero">{BEAN}
 <div class="hstat"><b>{t('h_s2')}</b><span>{t('h_l2')}</span></div>
 <div class="hstat"><b>{t('h_s3')}</b><span>{t('h_l3')}</span></div>
 </div></div>""")
+if ss.step == 1:
+    facts = "".join(f'<div class="fact"><b>{n}</b><span>{l}</span></div>' for n, l in t("facts"))
+    H(f"""<div class="fmm"><div><div class="k">{t('fmm_k')}</div><h3>{t('fmm_t')}</h3><p>{t('fmm_p')}</p></div>
+<div><div class="facts">{facts}</div><div class="fsrc">{t('fmm_src')}</div></div></div>""")
 
 
 def stepper():
@@ -384,10 +421,10 @@ if ss.step == 1:
             lis = "".join(f"<li>{x}</li>" for x in t("inc_" + k))
             H(f"""<div class="pk{sel}{prem}">
 <span class="badge">{t('badge_' + k)}</span>
-<div class="ic">{p['icon']}</div>
+<div class="ic">{t('prog')} {['inm', 'campo', 'prem'].index(k) + 1:02d}</div>
 <h3>{t('name_' + k)}</h3><div class="for">{t('for_' + k)}</div>
 <div class="price">{usd(p['price'])} <small>{per}</small></div>
-<div class="meta"><span class="chip">🗓 {p['days']} {t('days')} · {p['nights']} {t('nights')}</span><span class="chip">👥 {t('size_' + k)}</span></div>
+<div class="meta"><span class="chip">{p['days']} {t('days')} · {p['nights']} {t('nights')}</span><span class="chip">{t('size_' + k)}</span></div>
 <ul>{lis}</ul>
 <div class="impact"><b>{usd(p['community'])}</b> {t('community')}</div>
 </div>""")
@@ -395,7 +432,7 @@ if ss.step == 1:
                 set_pkg(k)
                 ss.step = 2
                 st.rerun()
-    H(f"""<div class="soon"><div><b>🎓 {t('soon_t')}</b><br><span class="p">{t('soon_p')}</span></div><span class="tag">{t('soon_b')}</span></div>""")
+    H(f"""<div class="soon"><div><b>{t('soon_t')}</b><br><span class="p">{t('soon_p')}</span></div><span class="tag">{t('soon_b')}</span></div>""")
 
     H(f'<div class="sec-t" style="font-size:24px;margin-top:34px">{t("explore")}</div>')
     tab1, tab2, tab3 = st.tabs([t("tab_cmp"), t("tab_it"), t("tab_faq")])
@@ -403,12 +440,12 @@ if ss.step == 1:
         rows = t("cmp_rows")
         vals = {k: [f"{PKGS[k]['days']} {t('days')}", usd(PKGS[k]["price"]), t("size_" + k), t("lodg_" + k), str(PKGS[k]["fincas"]), str(PKGS[k]["experts"]),
                     str(PKGS[k]["comp"]) if PKGS[k]["comp"] else "—", t("for_" + k)] for k in PKGS}
-        html = f'<table class="cmp"><tr><th></th>' + "".join(f"<th>{PKGS[k]['icon']} {t('name_' + k)}</th>" for k in PKGS) + "</tr>"
+        html = f'<table class="cmp"><tr><th></th>' + "".join(f"<th>{t('name_' + k)}</th>" for k in PKGS) + "</tr>"
         for i, rl in enumerate(rows):
             html += f"<tr><td>{rl}</td>" + "".join(f"<td>{vals[k][i]}</td>" for k in PKGS) + "</tr>"
         H(html + "</table>")
     with tab2:
-        names = {k: f"{PKGS[k]['icon']} {t('name_' + k)}" for k in PKGS}
+        names = {k: f"{t('name_' + k)}" for k in PKGS}
         pick = st.radio(t("it_pick"), list(PKGS), format_func=lambda k: names[k], horizontal=True, key="itpick")
         tl = '<div class="tl">' + "".join(f'<div class="it"><div class="k">{a}</div><b>{b}</b><span>{c}</span></div>' for a, b, c in t("it_" + pick)) + "</div>"
         H(tl)
@@ -421,7 +458,7 @@ if ss.step == 1:
 # Paso 2: configuración
 # ---------------------------------------------------------------------------
 elif ss.step == 2:
-    H(f'<div class="sec-t">{P["icon"]} {t("name_" + ss.pkg)}</div><div class="sec-p">{t("s2_p")}</div>')
+    H(f'<div class="sec-t">{t("name_" + ss.pkg)}</div><div class="sec-p">{t("s2_p")}</div>')
     left, right = st.columns([1.35, 1], gap="large")
     with left:
         H(f'<div style="font-weight:600;font-size:18px;margin-bottom:6px">{t("date")}</div>')
@@ -437,7 +474,7 @@ elif ss.step == 2:
         lab = t("n_trav") if P["kind"] == "trav" else t("n_uni")
         ss.n = st.slider(lab, P["min"], P["max"], min(max(ss.n, P["min"]), P["max"]))
         if P["kind"] == "uni":
-            st.caption(f"✓ {t('min_note')}  ·  👩‍🏫 {P['comp']} {t('comp_note')}")
+            st.caption(f"{t('min_note')}  ·  {P['comp']} {t('comp_note')}")
         st.write("")
         H(f'<div style="font-weight:600;font-size:18px;margin:10px 0 6px">{t("tab_it")}</div>')
         tl = '<div class="tl">' + "".join(f'<div class="it"><div class="k">{a}</div><b>{b}</b><span>{c}</span></div>' for a, b, c in t("it_" + ss.pkg)) + "</div>"
@@ -448,17 +485,17 @@ elif ss.step == 2:
         people = ss.n + P["comp"]
         dep_d, bal_d = a - timedelta(days=60), a - timedelta(days=30)
         perday = P["price"] / P["days"]
-        comp_row = f'<div class="row"><span>👩‍🏫 {P["comp"]} × {usd(P["price"])}</span><span>{t("free")}</span></div>' if P["comp"] else ""
+        comp_row = f'<div class="row"><span>{P["comp"]} {t("comp_short")}</span><span>{t("free")}</span></div>' if P["comp"] else ""
         H(f"""<div class="sum">
 <div class="lbl">{t('summary')}</div>
-<h4>{P['icon']} {t('name_' + ss.pkg)}</h4>
-<div class="d">🗓 {fdate(a)} {t('to')} {fdate(b)} · 👥 {people} {t('persons')}</div>
+<h4>{t('name_' + ss.pkg)}</h4>
+<div class="d">{fdate(a)} {t('to')} {fdate(b)} · {people} {t('persons')}</div>
 <div class="tot">{usd(total)}</div>
 <div class="d">{t('subtotal')} · {usd(perday)} {t('per_day')}</div>
 <div style="margin-top:16px">
 <div class="row"><span>{ss.n} × {usd(P['price'])}</span><span>{usd(total)}</span></div>
 {comp_row}
-<div class="row"><span>🌱 {t('community_tot')}</span><span>{usd(P['community'] * ss.n)}</span></div>
+<div class="row"><span>{t('community_tot')}</span><span>{usd(P['community'] * ss.n)}</span></div>
 </div>
 <div class="lbl" style="margin-top:20px">{t('pay_plan')}</div>
 <div class="row"><span>{t('today')}</span><span>{t('today_v')}</span></div>
@@ -522,9 +559,9 @@ elif ss.step == 3:
         total = P["price"] * ss.n
         H(f"""<div class="sum">
 <div class="lbl">{t('summary')}</div>
-<h4>{P['icon']} {t('name_' + ss.pkg)}</h4>
-<div class="d">🗓 {fdate(a)} {t('to')} {fdate(b)}</div>
-<div class="d">👥 {ss.n} × {usd(P['price'])}{f' + {P["comp"]} {t("free")}' if P['comp'] else ''}</div>
+<h4>{t('name_' + ss.pkg)}</h4>
+<div class="d">{fdate(a)} {t('to')} {fdate(b)}</div>
+<div class="d">{ss.n} × {usd(P['price'])}{f' + {P["comp"]} {t("free")}' if P['comp'] else ''}</div>
 <div class="tot">{usd(total)}</div>
 <div class="row"><span>{t('today')}</span><span>{t('today_v')}</span></div>
 <div class="row"><span>{t('deposit')}</span><span>{usd(total / 2)}</span></div>
@@ -554,13 +591,13 @@ else:
         st.write("")
         H(f"""<div class="sum">
 <div class="lbl">{t('summary')}</div>
-<h4>{P['icon']} {t('name_' + ss.pkg)}</h4>
-<div class="d">🗓 {fdate(a)} {t('to')} {fdate(b)}</div>
+<h4>{t('name_' + ss.pkg)}</h4>
+<div class="d">{fdate(a)} {t('to')} {fdate(b)}</div>
 <div class="d">{f.get('inst') or f.get('name')} · {f.get('country')}</div>
 <div class="tot">{usd(total)}</div>
 <div class="row"><span>{t('deposit')} · {fdate(dep_d)}</span><span>{usd(total / 2)}</span></div>
 <div class="row"><span>{t('balance')} · {fdate(bal_d)}</span><span>{usd(total / 2)}</span></div>
-<div class="row"><span>🌱 {t('community_tot')}</span><span>{usd(P['community'] * ss.n)}</span></div>
+<div class="row"><span>{t('community_tot')}</span><span>{usd(P['community'] * ss.n)}</span></div>
 </div>""")
         txt = (f"Cátedra Cafetera · {t('code')}: {ss.code}\n{t('name_' + ss.pkg)}\n{fdate(a)} {t('to')} {fdate(b)}\n"
                f"{ss.n} × {usd(P['price'])} = {usd(total)}\n{t('deposit')}: {usd(total / 2)} ({t('due')} {fdate(dep_d)})\n"
@@ -572,4 +609,7 @@ else:
             ss.step, ss.form, ss.code = 1, {}, ""
             st.rerun()
 
-H(f'<div class="foot">{t("foot")}</div>')
+H(f"""<div class="foot"><div><div class="ft">{t('f_t')}</div><div class="fx">{t('f_x')}</div></div>
+<div><div class="fh">{t('f_h1')}</div><div class="fx">{t('f_x1')}</div></div>
+<div><div class="fh">{t('f_h2')}</div><div class="fx">{t('f_x2')}</div></div></div>
+<div class="legal">{t('foot')}</div>""")
