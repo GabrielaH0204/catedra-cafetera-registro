@@ -13,6 +13,15 @@ import streamlit as st
 LOGO_PATH = Path(__file__).parent / "logo_fmm.png"
 LOGO_B64 = base64.b64encode(LOGO_PATH.read_bytes()).decode() if LOGO_PATH.exists() else ""
 
+
+def img64(name):
+    f = Path(__file__).parent / name
+    return base64.b64encode(f.read_bytes()).decode() if f.exists() else ""
+
+
+PAISAJE_B64 = img64("paisaje.jpg")
+SEDE_B64 = img64("sede.jpg")
+
 st.set_page_config(page_title="Cátedra Cafetera · Registro", page_icon="🌿", layout="wide", initial_sidebar_state="collapsed")
 
 # ---------------------------------------------------------------------------
@@ -270,7 +279,7 @@ html, body, .stApp, .stMarkdown, button, input, textarea, select, label, p, li{f
 [data-testid="stIconMaterial"], .material-symbols-rounded{font-family:'Material Symbols Rounded' !important;}
 .stApp{background:var(--paper);}
 #MainMenu, footer, header[data-testid="stHeader"]{visibility:hidden;height:0;}
-.block-container{padding-top:0;padding-bottom:3rem;max-width:1180px;}
+.block-container{padding-top:0;padding-bottom:3rem;max-width:1360px;padding-left:2.5rem;padding-right:2.5rem}
 p, li, label, span, div{color:var(--ink);}
 .serif, h1, h2, h3, h4, .sec-t{font-family:'Source Serif 4',Georgia,serif !important;}
 h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
@@ -283,7 +292,7 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .logo .sep{width:1px;height:52px;background:var(--line)}
 .logo .t1{font-family:'Source Serif 4',Georgia,serif !important;font-size:26px;font-weight:600;color:var(--ink);line-height:1;letter-spacing:-.2px}
 .logo .t2{font-size:13px;color:var(--ink2) !important;margin-top:4px}
-.hero{border-radius:4px;padding:64px 64px 52px;background:var(--coffee);border-top:4px solid var(--gold)}
+.hero{border-radius:12px;padding:72px 64px 56px;background-color:var(--coffee);background-size:cover;background-position:center 60%;border-top:4px solid var(--gold);box-shadow:0 18px 40px rgba(42,29,21,.18)}
 .hero *{color:#f4ede3}
 .hero .kick{font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#cfb489 !important}
 .hero h1{font-family:'Source Serif 4',Georgia,serif !important;font-size:58px;line-height:1.05;margin:16px 0 18px;color:#fbf8f3 !important;font-weight:600;letter-spacing:-.8px}
@@ -317,6 +326,25 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .sec-p{font-size:17px;color:var(--ink2) !important;margin-bottom:22px}
 .pk{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 26px 20px;min-height:860px;margin-bottom:12px;position:relative;display:flex;flex-direction:column}
 .pk{border-top:5px solid var(--c) !important;background:var(--t) !important}
+div[class*="st-key-pkrow_"]{border-radius:14px !important;border:1px solid var(--l) !important;border-top:5px solid var(--c) !important;background:var(--t) !important;box-shadow:var(--shadow);padding:22px 26px 26px !important;margin-bottom:8px}
+div[class*="st-key-pkrow_inm"]{--c:#8a3b1e;--t:#fbf0e8;--l:#ecd3c3}
+div[class*="st-key-pkrow_campo"]{--c:#2f5d3a;--t:#edf3ea;--l:#cddfc8}
+div[class*="st-key-pkrow_prem"]{--c:#a57c3c;--t:#f8efdf;--l:#e7d3ae}
+div[class*="_sel"][class*="st-key-pkrow_"]{border:2px solid var(--c) !important;border-top-width:5px !important;box-shadow:0 0 0 4px rgba(42,29,21,.06),0 14px 30px rgba(42,29,21,.14)}
+.ph .badge{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--c) !important}
+.ph .ic{font-family:'Source Serif 4',Georgia,serif !important;font-size:14px;color:var(--mute) !important;font-style:italic;margin:8px 0 0}
+.ph h3{font-size:26px;margin:0 0 2px;font-weight:600;letter-spacing:-.2px;padding:0}
+.ph .for{font-size:15px;color:var(--ink2) !important}
+.ph .price{font-size:34px;font-weight:700;color:var(--ink);margin-top:14px;line-height:1;letter-spacing:-.5px}
+.ph .price small{font-size:15px;font-weight:400;color:var(--ink2) !important;letter-spacing:0;margin-left:6px}
+.ph .meta{font-size:14px;color:var(--ink2) !important;margin-top:8px}
+.pl ul{list-style:none;padding:0;margin:0;columns:2;column-gap:28px}
+.pl li{break-inside:avoid;font-size:14.5px;line-height:1.45;padding:7px 0 7px 24px;position:relative;border-bottom:1px solid var(--l);margin:0}
+.pl li:before{content:"✓";position:absolute;left:2px;top:7px;font-weight:700;color:var(--c)}
+.pa .impact{margin:0 0 12px}
+.sede-top{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:center;margin-bottom:22px}
+.sede-top img{width:100%;border-radius:12px;box-shadow:var(--shadow);display:block;aspect-ratio:16/9;object-fit:cover}
+@media (max-width: 900px){.sede-top{grid-template-columns:1fr}.pl ul{columns:1}}
 .pk.c-inm{--c:#8a3b1e;--t:#fbf0e8;--l:#ecd3c3}
 .pk.c-campo{--c:#2f5d3a;--t:#edf3ea;--l:#cddfc8}
 .pk.c-prem{--c:#a57c3c;--t:#f8efdf;--l:#e7d3ae}
@@ -435,6 +463,8 @@ with c2:
         ss.lang = "en" if lang == "English" else "es"
         st.rerun()
 
+if PAISAJE_B64:
+    H(f"<style>.hero{{background-image:linear-gradient(90deg,rgba(42,29,21,.94) 0%,rgba(42,29,21,.82) 42%,rgba(42,29,21,.35) 100%),url(data:image/jpeg;base64,{PAISAJE_B64})}}</style>")
 H(f"""<div class="hero">
 <div class="kick">{t('hero_kick')}</div>
 <h1>{t('hero_t1')}<br><em>{t('hero_t2')}</em></h1>
@@ -474,27 +504,25 @@ def set_pkg(k):
 # ---------------------------------------------------------------------------
 if ss.step == 1:
     H(f'<div class="sec-t">{t("s1_t")}</div><div class="sec-p">{t("s1_p")}</div>')
-    cols = st.columns(3, gap="medium")
-    for col, k in zip(cols, ["inm", "campo", "prem"]):
+    for i, k in enumerate(["inm", "campo", "prem"]):
         p = PKGS[k]
-        with col:
-            sel = " sel" if ss.pkg == k else ""
-            prem = " prem" if k == "prem" else ""
-            per = t("per_trav") if p["kind"] == "trav" else t("per_pax")
-            lis = "".join(f"<li>{x}</li>" for x in t("inc_" + k))
-            H(f"""<div class="pk c-{k}{sel}{prem}">
-<span class="badge">{t('badge_' + k)}</span>
-<div class="ic">{t('prog')} {['inm', 'campo', 'prem'].index(k) + 1:02d}</div>
-<h3>{t('name_' + k)}</h3><div class="for">{t('for_' + k)}</div>
-<div class="price">{usd(p['price'])} <small>{per}</small></div>
-<div class="meta"><span class="chip">{p['days']} {t('days')} · {p['nights']} {t('nights')}</span><span class="chip">{t('size_' + k)}</span></div>
-<ul>{lis}</ul>
-<div class="impact"><b>{usd(p['community'])}</b> {t('community')}</div>
-</div>""")
-            if st.button(t("chosen") if ss.pkg == k else t("choose"), key="b_" + k, use_container_width=True, type="primary" if ss.pkg == k else "secondary"):
-                set_pkg(k)
-                ss.step = 2
-                st.rerun()
+        per = t("per_trav") if p["kind"] == "trav" else t("per_pax")
+        lis = "".join(f"<li>{x}</li>" for x in t("inc_" + k))
+        with st.container(border=True, key=f"pkrow_{k}" + ("_sel" if ss.pkg == k else "")):
+            c1, c2, c3 = st.columns([1.15, 1.85, 0.95], gap="large", vertical_alignment="center")
+            with c1:
+                H(f"""<div class="ph"><span class="badge">{t('badge_' + k)}</span>
+<div class="ic">{t('prog')} {i + 1:02d}</div><h3>{t('name_' + k)}</h3><div class="for">{t('for_' + k)}</div>
+<div class="price">{usd(p['price'])}<small>{per}</small></div>
+<div class="meta">{p['days']} {t('days')} · {p['nights']} {t('nights')} · {t('size_' + k)}</div></div>""")
+            with c2:
+                H(f'<div class="pl"><ul>{lis}</ul></div>')
+            with c3:
+                H(f'<div class="pa"><div class="impact"><b>{usd(p["community"])}</b> {t("community")}</div></div>')
+                if st.button(t("chosen") if ss.pkg == k else t("choose"), key="b_" + k, use_container_width=True, type="primary" if ss.pkg == k else "secondary"):
+                    set_pkg(k)
+                    ss.step = 2
+                    st.rerun()
     H(f"""<div class="soon"><div><b>{t('soon_t')}</b><br><span class="p">{t('soon_p')}</span></div><span class="tag">{t('soon_b')}</span></div>""")
 
     H(f'<div class="explore"><div class="k">{t("explore_k")}</div><h2>{t("explore")}</h2><p>{t("explore_p")}</p></div>')
@@ -517,9 +545,9 @@ if ss.step == 1:
     with tab4:
         cells = "".join(f'<div class="fact"><b>{n}<em>{u}</em></b><span>{l}</span></div>' for n, u, l in t("sede_f"))
         near = "".join(f"<span>{x}</span>" for x in t("near"))
-        H(f"""<div class="sede-p">{t('sede_p')}</div><div class="sede">{cells}</div>
-<div class="fsrc" style="margin-top:22px;font-weight:600;color:var(--ink2)">{t('near_t')}</div><div class="near">{near}</div>
-<div class="fsrc">{t('sede_src')}</div>""")
+        photo = f'<img src="data:image/jpeg;base64,{SEDE_B64}" alt="{t("tab_sede")}">' if SEDE_B64 else ""
+        H(f"""<div class="sede-top">{photo}<div><div class="sede-p">{t('sede_p')}</div><div class="fsrc" style="font-weight:600;color:var(--ink2)">{t('near_t')}</div><div class="near">{near}</div></div></div><div class="sede">{cells}</div>
+<div class="fsrc" style="margin-top:14px">{t('sede_src')}</div>""")
     with tab3:
         H('<div class="faq">' + "".join(f'<details><summary>{q}<span class="pm"></span></summary><div class="ans">{a}</div></details>' for q, a in t("faq")) + "</div>")
 
