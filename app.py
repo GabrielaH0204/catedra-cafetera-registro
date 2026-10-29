@@ -39,10 +39,10 @@ T = {
         "fmm_k": "Quiénes somos",
         "fmm_t": "Más de 60 años educando al sector cafetero colombiano",
         "fmm_p": "La Fundación Manuel Mejía ha acompañado a los caficultores colombianos y a sus comunidades desde su sede educativa en Chinchiná, en el corazón del Paisaje Cultural Cafetero. La Cátedra Cafetera abre ese conocimiento a universidades y viajeros de todo el mundo.",
-        "facts": [("+700.000", "caficultores acompañados en más de 60 años"), ("163.861", "participantes en formación presencial desde 2010, de 32 departamentos y 7 países"), ("19.406", "estudiantes formados en 2025"), ("4,8 / 5", "satisfacción promedio de 15.731 participantes")],
+        "facts": [("+700.000", "caficultores", "acompañados en más de 60 años"), ("163.861", "participantes", "en formación presencial desde 2010, de 32 departamentos y 7 países"), ("19.406", "estudiantes", "formados en 2025"), ("4,8 / 5", "de satisfacción", "promedio de 15.731 participantes")],
         "tab_sede": "La sede en Chinchiná",
         "sede_p": "Los programas se viven en la Sede Educativa de la Fundación, en la vereda Quiebra de Naranjal, a 11 km de Chinchiná y a 1.450 metros sobre el nivel del mar: un campus con cafetal propio, aulas, alojamiento y restaurante, en el corazón de la institucionalidad cafetera.",
-        "sede_f": [("213", "camas en 12 cabañas, habitaciones y dormitorios"), ("2,5 ha", "de café con beneficiadero para las prácticas"), ("13 ha", "de ambientes naturales y sendero ecológico"), ("18", "salones de clase y un auditorio para 150 personas"), ("120", "personas por hora en el comedor de la sede"), ("9.725", "participantes atendidos en la sede entre 2019 y 2026")],
+        "sede_f": [("213", "camas", "en 12 cabañas, habitaciones y dormitorios"), ("2,5", "hectáreas de café", "con beneficiadero, para las prácticas"), ("13", "hectáreas", "para proyectos ambientales y aprendizaje en la naturaleza, con sendero ecológico"), ("18", "salones", "de clase, más un auditorio para 150 personas"), ("120", "personas por hora", "en el comedor de la sede"), ("9.725", "participantes", "atendidos en la sede entre 2019 y 2026")],
         "near_t": "A pocos kilómetros de",
         "near": ["Cenicafé", "Buencafé Liofilizado de Colombia", "Parque del Café", "Fincas de Chinchiná"],
         "sede_src": "Fuente: Fundación Manuel Mejía, Capacidad instalada de la Sede Educativa (2026).",
@@ -67,17 +67,17 @@ T = {
         "name_inm": "Inmersión cafetera", "name_campo": "Programa de campo", "name_prem": "Experiencia premium",
         "for_inm": "Para cursos cortos de universidades", "for_campo": "Para programas de verano de universidades", "for_prem": "Para viajeros que aman el café",
         "size_inm": "10 a 15 estudiantes", "size_campo": "10 a 14 estudiantes", "size_prem": "Grupos de 6 a 10 viajeros",
-        "inc_inm": ["Hotel en Chinchiná (habitación doble) y 3 comidas al día", "Transporte terrestre durante todo el programa", "3 fincas anfitrionas y 4 sesiones con expertos de Cenicafé", "Docente de la FMM y guía bilingüe", "Seguro de asistencia en viaje", "2 profesores acompañantes sin costo"],
+        "inc_inm": ["Cabañas de la sede educativa de la FMM y 3 comidas al día", "Transporte terrestre durante todo el programa", "3 fincas anfitrionas y 4 sesiones con expertos de Cenicafé", "Docente de la FMM y guía bilingüe", "Seguro de asistencia en viaje", "2 profesores acompañantes sin costo"],
         "inc_campo": ["27 noches en finca cafetera con familias anfitrionas", "Almuerzo y cena todos los días; desayuno en la finca", "10 días de aprendizaje en fincas y 12 sesiones con expertos", "Proyecto aplicado a un reto real del sector", "Docente de la FMM, guía bilingüe y seguro de 4 semanas", "1 profesor acompañante sin costo"],
         "inc_prem": ["Hoteles boutique y fincas de gama alta", "Gastronomía regional: 3 comidas al día", "Van privada con conductor", "3 fincas, catación guiada y visita a Cenicafé", "Anfitrión de la FMM y guía bilingüe", "Seguro de asistencia en viaje"],
         "soon_t": "Semestre con créditos", "soon_p": "Llegará cuando los dos primeros formatos demuestren demanda y calidad, y con el aval de una universidad colombiana.", "soon_b": "Próximamente",
         "community": "deja cada participante directamente en familias caficultoras", "community_tot": "Para familias caficultoras",
-        "explore": "Conoce más antes de decidir",
+        "explore": "Conoce más antes de decidir", "explore_k": "Antes de reservar", "explore_p": "Compara los programas, mira el día a día, conoce la sede y resuelve tus dudas.",
         "tab_cmp": "Comparar programas", "tab_it": "Así es un día a día", "tab_faq": "Preguntas frecuentes",
         "cmp_rows": ["Duración", "Precio", "Tamaño del grupo", "Alojamiento", "Fincas anfitrionas", "Sesiones con expertos", "Acompañantes sin costo", "Para quién"],
-        "lodg_inm": "Hotel en Chinchiná", "lodg_campo": "Finca con familia caficultora", "lodg_prem": "Boutique y fincas de gama alta",
+        "lodg_inm": "Cabañas de la sede de la FMM", "lodg_campo": "Finca con familia caficultora", "lodg_prem": "Boutique y fincas de gama alta",
         "it_pick": "Ver itinerario de",
-        "it_inm": [("Día 1", "Llegada y bienvenida", "Recogida en el aeropuerto de Pereira o Manizales, llegada a Chinchiná y primera catación en la sede de la FMM."),
+        "it_inm": [("Día 1", "Llegada y bienvenida", "Recogida en el aeropuerto de Pereira o Manizales, llegada a las cabañas de la sede de la FMM y primera catación."),
                    ("Día 2", "La ciencia del café", "Jornada en Cenicafé: variedades, clima y suelos, con investigadores del centro."),
                    ("Día 3", "Del cultivo a la cosecha", "Primera finca anfitriona: el caficultor enseña a sembrar, cuidar y recolectar."),
                    ("Día 4", "Beneficio y calidad", "Segunda finca: despulpado, fermentación y secado. Taller de catación por la tarde."),
@@ -130,10 +130,10 @@ T = {
         "fmm_k": "Who we are",
         "fmm_t": "Over 60 years educating Colombia's coffee sector",
         "fmm_p": "Fundación Manuel Mejía has supported Colombian coffee growers and their communities from its campus in Chinchiná, in the heart of the Coffee Cultural Landscape. The Cátedra Cafetera opens that knowledge to universities and travelers from around the world.",
-        "facts": [("700,000+", "coffee growers supported over 60 years"), ("163,861", "in-person participants since 2010, from 32 departments and 7 countries"), ("19,406", "students trained in 2025"), ("4.8 / 5", "average satisfaction from 15,731 participants")],
+        "facts": [("700,000+", "coffee growers", "supported over 60 years"), ("163,861", "participants", "in in-person training since 2010, from 32 departments and 7 countries"), ("19,406", "students", "trained in 2025"), ("4.8 / 5", "satisfaction", "average from 15,731 participants")],
         "tab_sede": "The Chinchiná campus",
         "sede_p": "Programs take place at the Foundation's campus in the rural district of Quiebra de Naranjal, 11 km from Chinchiná and 1,450 meters above sea level: a campus with its own coffee plot, classrooms, lodging and dining hall, at the heart of Colombia's coffee institutions.",
-        "sede_f": [("213", "beds in 12 cabins, rooms and dormitories"), ("2.5 ha", "of coffee with a wet mill for hands-on practice"), ("13 ha", "of natural learning areas and an ecological trail"), ("18", "classrooms and an auditorium for 150 people"), ("120", "people per hour in the campus dining hall"), ("9,725", "participants hosted on campus from 2019 to 2026")],
+        "sede_f": [("213", "beds", "in 12 cabins, rooms and dormitories"), ("2.5", "hectares of coffee", "with a wet mill for hands-on practice"), ("13", "hectares", "for environmental projects and outdoor learning, with an ecological trail"), ("18", "classrooms", "plus an auditorium for 150 people"), ("120", "people per hour", "in the campus dining hall"), ("9,725", "participants", "hosted on campus from 2019 to 2026")],
         "near_t": "A few kilometers from",
         "near": ["Cenicafé", "Buencafé Liofilizado de Colombia", "Parque del Café", "Chinchiná coffee farms"],
         "sede_src": "Source: Fundación Manuel Mejía, Installed capacity of the Educational Campus (2026).",
@@ -158,17 +158,17 @@ T = {
         "name_inm": "Coffee immersion", "name_campo": "Field program", "name_prem": "Premium experience",
         "for_inm": "For short university courses", "for_campo": "For university summer programs", "for_prem": "For coffee-loving travelers",
         "size_inm": "10 to 15 students", "size_campo": "10 to 14 students", "size_prem": "Groups of 6 to 10 travelers",
-        "inc_inm": ["Hotel in Chinchiná (double room) and 3 meals a day", "Ground transportation throughout the program", "3 host farms and 4 sessions with Cenicafé experts", "FMM instructor and bilingual guide", "Travel assistance insurance", "2 accompanying faculty free of charge"],
+        "inc_inm": ["Cabins at the FMM campus and 3 meals a day", "Ground transportation throughout the program", "3 host farms and 4 sessions with Cenicafé experts", "FMM instructor and bilingual guide", "Travel assistance insurance", "2 accompanying faculty free of charge"],
         "inc_campo": ["27 nights on a coffee farm with host families", "Lunch and dinner every day; breakfast at the farm", "10 learning days on farms and 12 expert sessions", "Applied project on a real challenge of the sector", "FMM instructor, bilingual guide and 4-week insurance", "1 accompanying faculty member free of charge"],
         "inc_prem": ["Boutique hotels and high-end coffee farms", "Regional cuisine: 3 meals a day", "Private van with driver", "3 farms, guided cupping and a visit to Cenicafé", "FMM host and bilingual guide", "Travel assistance insurance"],
         "soon_t": "Semester with credits", "soon_p": "Coming once the first two formats prove demand and quality, with the endorsement of a Colombian university.", "soon_b": "Coming soon",
         "community": "goes from each participant directly to coffee-growing families", "community_tot": "To coffee-growing families",
-        "explore": "Learn more before you decide",
+        "explore": "Learn more before you decide", "explore_k": "Before you book", "explore_p": "Compare the programs, see the day-by-day plan, meet the campus and get your questions answered.",
         "tab_cmp": "Compare programs", "tab_it": "Day by day", "tab_faq": "FAQ",
         "cmp_rows": ["Length", "Price", "Group size", "Lodging", "Host farms", "Expert sessions", "Free accompanying faculty", "Best for"],
-        "lodg_inm": "Hotel in Chinchiná", "lodg_campo": "Farm stay with a coffee family", "lodg_prem": "Boutique hotels and high-end farms",
+        "lodg_inm": "Cabins at the FMM campus", "lodg_campo": "Farm stay with a coffee family", "lodg_prem": "Boutique hotels and high-end farms",
         "it_pick": "See the itinerary of",
-        "it_inm": [("Day 1", "Arrival and welcome", "Pick-up at Pereira or Manizales airport, arrival in Chinchiná and a first cupping at the FMM campus."),
+        "it_inm": [("Day 1", "Arrival and welcome", "Pick-up at Pereira or Manizales airport, check-in at the FMM campus cabins and a first cupping."),
                    ("Day 2", "The science of coffee", "A day at Cenicafé: varieties, climate and soils, with the center's researchers."),
                    ("Day 3", "From planting to harvest", "First host farm: the grower teaches how to plant, tend and pick coffee."),
                    ("Day 4", "Processing and quality", "Second farm: pulping, fermentation and drying. Cupping workshop in the afternoon."),
@@ -260,7 +260,7 @@ def H(s):
 H("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap');
-:root{--paper:#fbf8f3;--white:#ffffff;--sand:#f1e9dd;--ink:#1f1a16;--ink2:#5f544b;--mute:#8a7e73;--line:#e4dccf;--coffee:#2a1d15;--accent:#8a3b1e;--accent2:#6f2f17;--leaf:#2f5d3a;--gold:#b08a4f;}
+:root{--paper:#ede3d3;--white:#fffdf9;--sand:#e4d6c1;--ink:#1f1a16;--ink2:#54483e;--mute:#7c6f63;--line:#d9cab3;--shadow:0 1px 2px rgba(42,29,21,.06),0 8px 22px rgba(42,29,21,.08);--coffee:#2a1d15;--accent:#8a3b1e;--accent2:#6f2f17;--leaf:#2f5d3a;--gold:#b08a4f;}
 html, body, .stApp, .stMarkdown, button, input, textarea, select, label, p, li{font-family:'Source Sans 3',-apple-system,'Segoe UI',sans-serif !important;}
 [data-testid="stIconMaterial"], .material-symbols-rounded{font-family:'Material Symbols Rounded' !important;}
 .stApp{background:var(--paper);}
@@ -269,7 +269,7 @@ html, body, .stApp, .stMarkdown, button, input, textarea, select, label, p, li{f
 p, li, label, span, div{color:var(--ink);}
 .serif, h1, h2, h3, h4, .sec-t{font-family:'Source Serif 4',Georgia,serif !important;}
 h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
-.demo{background:var(--sand);color:var(--ink2) !important;text-align:center;font-size:13px;padding:7px 12px;margin:12px 0 0;border:1px solid var(--line);border-radius:4px}
+.demo{background:var(--white);color:var(--ink2) !important;text-align:center;font-size:13px;padding:7px 12px;margin:12px 0 0;border:1px solid var(--line);border-radius:4px}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0 18px;margin-bottom:6px}
 .logo{display:flex;align-items:center;gap:16px}
 .logo .by{font-size:11px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--mute) !important;line-height:1.3}
@@ -292,10 +292,13 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .fmm .k{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent) !important}
 .fmm h3{font-size:28px;line-height:1.2;margin:10px 0 12px;font-weight:600;color:var(--ink)}
 .fmm p{font-size:16px;line-height:1.6;color:var(--ink2) !important}
-.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.fact{padding:20px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
-.fact b{display:block;font-family:'Source Serif 4',Georgia,serif !important;font-size:34px;font-weight:600;color:var(--ink);line-height:1.1}
-.fact span{font-size:14.5px;color:var(--ink2) !important}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.fact{padding:20px 22px 18px;background:var(--white);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;box-shadow:var(--shadow)}
+.fact:nth-child(3n+2){border-top-color:var(--accent)}
+.fact:nth-child(3n+3){border-top-color:var(--leaf)}
+.fact b{display:block;font-family:'Source Serif 4',Georgia,serif !important;font-size:34px;font-weight:600;color:var(--coffee);line-height:1.1}
+.fact b em{font-style:normal;font-family:'Source Sans 3',sans-serif !important;font-size:17px;font-weight:600;color:var(--accent) !important;margin-left:4px}
+.fact span{display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:var(--ink2) !important}
 .fsrc{font-size:12.5px;color:var(--mute) !important;margin-top:10px}
 .stepper{display:flex;gap:0;margin:38px 0 6px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .st{flex:1;min-width:150px;display:flex;align-items:center;gap:10px;padding:12px 4px 14px;font-size:15px;font-weight:500;color:var(--mute);border-bottom:3px solid transparent;margin-bottom:-1px}
@@ -306,7 +309,7 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .st.done .n{background:var(--leaf);border-color:var(--leaf);color:#fff !important}
 .sec-t{font-size:34px;font-weight:600;margin:30px 0 6px;color:var(--ink);letter-spacing:-.3px}
 .sec-p{font-size:17px;color:var(--ink2) !important;margin-bottom:22px}
-.pk{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:28px 26px 20px;min-height:860px;margin-bottom:12px;position:relative;display:flex;flex-direction:column}
+.pk{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 26px 20px;min-height:860px;margin-bottom:12px;position:relative;display:flex;flex-direction:column}
 .pk.sel{border-color:var(--accent);box-shadow:inset 0 3px 0 var(--accent)}
 .pk .badge{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--accent) !important}
 .pk.prem .badge{color:var(--gold) !important}
@@ -324,11 +327,11 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .pk li:before{content:"✓";position:absolute;left:2px;top:7px;font-weight:700;color:var(--leaf)}
 .impact{margin-top:auto;border-left:3px solid var(--leaf);background:#f3f6f1;padding:10px 14px;font-size:14px;color:#2c4a31 !important}
 .impact b{color:var(--leaf) !important;font-size:16px}
-.soon{border-radius:6px;padding:22px 26px;margin-top:18px;border:1px solid var(--line);background:var(--sand);display:flex;align-items:center;justify-content:space-between;gap:18px}
+.soon{border-radius:12px;padding:22px 26px;margin-top:18px;border:1px solid var(--line);background:var(--sand);display:flex;align-items:center;justify-content:space-between;gap:18px}
 .soon b{font-family:'Source Serif 4',Georgia,serif !important;font-size:20px;font-weight:600}
 .soon span.p{font-size:15px;color:var(--ink2) !important}
 .soon .tag{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--ink2) !important;white-space:nowrap;border:1px solid var(--ink2);padding:6px 12px;border-radius:3px}
-.sum{background:var(--coffee);border-radius:6px;padding:28px 30px;border-top:4px solid var(--gold)}
+.sum{background:var(--coffee);border-radius:12px;box-shadow:0 14px 34px rgba(42,29,21,.22);padding:28px 30px;border-top:4px solid var(--gold)}
 .sum *{color:#f4ede3 !important}
 .sum .lbl{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#cfb489 !important;font-weight:600}
 .sum h4{font-family:'Source Serif 4',Georgia,serif !important;font-size:24px;font-weight:600;margin:8px 0 4px;color:#fbf8f3 !important}
@@ -344,7 +347,7 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .tl .it .k{font-size:12px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;color:var(--mute) !important}
 .tl .it b{display:block;font-family:'Source Serif 4',Georgia,serif !important;font-size:19px;font-weight:600;margin:2px 0}
 .tl .it span{font-size:15.5px;color:var(--ink2) !important;line-height:1.55}
-.cmp{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line)}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
 .cmp th{background:var(--sand);color:var(--ink) !important;font-family:'Source Serif 4',Georgia,serif !important;font-weight:600;font-size:17px;padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
 .cmp td{padding:12px 16px;font-size:15px;border-top:1px solid #efe8de}
 .cmp td:first-child{color:var(--ink2) !important;font-weight:600;width:24%}
@@ -364,13 +367,25 @@ h1 *, h2 *, h3 *, h4 *, .sec-t *{font-family:inherit !important;}
 .stButton>button[kind="primary"] p, .stFormSubmitButton>button p{color:#fff !important}
 .stButton>button[kind="primary"]:hover, .stFormSubmitButton>button:hover{background:var(--accent2) !important;color:#fff !important}
 div[data-baseweb="input"], div[data-baseweb="select"]>div, div[data-baseweb="textarea"]{border-radius:4px !important;background:#fff !important}
-.stTabs [data-baseweb="tab-list"]{gap:24px;border-bottom:1px solid var(--line)}
-.stTabs [data-baseweb="tab"]{background:transparent;padding:10px 0;font-weight:600;font-size:16px}
+.stTabs [role="tablist"]{display:flex !important;gap:6px !important;background:var(--white) !important;border:1px solid var(--line) !important;border-radius:12px !important;padding:6px !important;box-shadow:var(--shadow);width:fit-content;max-width:100%;flex-wrap:wrap;margin-bottom:4px}
+.stTabs [role="tablist"]::before, .stTabs [role="tablist"]::after{display:none !important}
+.stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab-border"], .stTabs .react-aria-SelectionIndicator{display:none !important}
+.stTabs [role="tab"]{background:transparent !important;padding:10px 18px !important;border-radius:8px !important;height:auto !important;border:none !important;margin:0 !important;cursor:pointer}
+.stTabs [role="tab"] p{font-weight:600 !important;font-size:15.5px !important;color:var(--ink2) !important}
+.stTabs [role="tab"]:hover{background:var(--sand) !important}
+.stTabs [role="tab"][aria-selected="true"]{background:var(--coffee) !important}
+.stTabs [role="tab"][aria-selected="true"] p{color:#fbf8f3 !important}
+.stTabs [role="tabpanel"]{padding-top:22px !important}
+.explore{margin:56px 0 18px;padding-top:34px;border-top:1px solid var(--line)}
+.explore .k{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent) !important}
+.explore h2{font-family:'Source Serif 4',Georgia,serif !important;font-size:34px;font-weight:600;margin:8px 0 6px;letter-spacing:-.3px}
+.explore p{font-size:17px;color:var(--ink2) !important;margin:0}
 div[data-testid="stExpander"]{background:var(--white);border-radius:4px;border:1px solid var(--line)}
-.faq{border-top:1px solid var(--line);margin-top:6px}
-.faq details{border-bottom:1px solid var(--line);background:transparent;transition:background .15s ease}
-.faq details[open]{background:var(--white)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 8px;font-family:'Source Serif 4',Georgia,serif !important;font-size:19px;font-weight:600;color:var(--ink)}
+.faq{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:10px;box-shadow:0 1px 2px rgba(42,29,21,.05);padding:0 14px;transition:box-shadow .15s ease}
+.faq details:hover{box-shadow:var(--shadow)}
+.faq details[open]{border-left:4px solid var(--accent);box-shadow:var(--shadow)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:18px 8px;font-family:'Source Serif 4',Georgia,serif !important;font-size:19px;font-weight:600;color:var(--ink)}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary:hover{color:var(--accent)}
 .faq .pm{flex:none;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;position:relative;background:var(--white)}
@@ -379,10 +394,10 @@ div[data-testid="stExpander"]{background:var(--white);border-radius:4px;border:1
 .faq details[open] .pm:after{transform:rotate(0deg)}
 .faq details[open] .pm{border-color:var(--accent)}
 .faq .ans{padding:0 64px 22px 8px;font-size:16px;line-height:1.65;color:var(--ink2) !important;max-width:860px}
-.sede{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:8px}
+.sede{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
 .sede .fact{background:var(--white)}
 .near{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px}
-.near span{font-size:14.5px;padding:7px 14px;border:1px solid var(--line);border-radius:3px;background:var(--white);color:var(--ink) !important}
+.near span{font-size:14.5px;font-weight:600;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);box-shadow:0 1px 2px rgba(42,29,21,.06);color:var(--ink) !important}
 .sede-p{font-size:16px;line-height:1.6;color:var(--ink2) !important;max-width:860px;margin:4px 0 14px}
 @media (max-width: 760px){.hero{padding:36px 24px}.hero h1{font-size:40px}.fmm,.foot{grid-template-columns:1fr}.hstat{border-right:none;margin-bottom:12px}.st{min-width:46%}}
 </style>
@@ -411,7 +426,7 @@ H(f"""<div class="hero">
 <div class="hstat"><b>{t('h_s3')}</b><span>{t('h_l3')}</span></div>
 </div></div>""")
 if ss.step == 1:
-    facts = "".join(f'<div class="fact"><b>{n}</b><span>{l}</span></div>' for n, l in t("facts"))
+    facts = "".join(f'<div class="fact"><b>{n}<em>{u}</em></b><span>{l}</span></div>' for n, u, l in t("facts"))
     H(f"""<div class="fmm"><div><div class="k">{t('fmm_k')}</div><h3>{t('fmm_t')}</h3><p>{t('fmm_p')}</p></div>
 <div><div class="facts">{facts}</div><div class="fsrc">{t('fmm_src')}</div></div></div>""")
 
@@ -463,7 +478,7 @@ if ss.step == 1:
                 st.rerun()
     H(f"""<div class="soon"><div><b>{t('soon_t')}</b><br><span class="p">{t('soon_p')}</span></div><span class="tag">{t('soon_b')}</span></div>""")
 
-    H(f'<div class="sec-t" style="font-size:24px;margin-top:34px">{t("explore")}</div>')
+    H(f'<div class="explore"><div class="k">{t("explore_k")}</div><h2>{t("explore")}</h2><p>{t("explore_p")}</p></div>')
     tab1, tab2, tab4, tab3 = st.tabs([t("tab_cmp"), t("tab_it"), t("tab_sede"), t("tab_faq")])
     with tab1:
         rows = t("cmp_rows")
@@ -479,7 +494,7 @@ if ss.step == 1:
         tl = '<div class="tl">' + "".join(f'<div class="it"><div class="k">{a}</div><b>{b}</b><span>{c}</span></div>' for a, b, c in t("it_" + pick)) + "</div>"
         H(tl)
     with tab4:
-        cells = "".join(f'<div class="fact"><b>{n}</b><span>{l}</span></div>' for n, l in t("sede_f"))
+        cells = "".join(f'<div class="fact"><b>{n}<em>{u}</em></b><span>{l}</span></div>' for n, u, l in t("sede_f"))
         near = "".join(f"<span>{x}</span>" for x in t("near"))
         H(f"""<div class="sede-p">{t('sede_p')}</div><div class="sede">{cells}</div>
 <div class="fsrc" style="margin-top:22px;font-weight:600;color:var(--ink2)">{t('near_t')}</div><div class="near">{near}</div>
