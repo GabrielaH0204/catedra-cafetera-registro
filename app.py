@@ -39,8 +39,14 @@ T = {
         "fmm_k": "Quiénes somos",
         "fmm_t": "Más de 60 años educando al sector cafetero colombiano",
         "fmm_p": "La Fundación Manuel Mejía ha acompañado a los caficultores colombianos y a sus comunidades desde su sede educativa en Chinchiná, en el corazón del Paisaje Cultural Cafetero. La Cátedra Cafetera abre ese conocimiento a universidades y viajeros de todo el mundo.",
-        "facts": [("+700.000", "caficultores acompañados en más de 60 años"), ("19.406", "estudiantes formados en 2025"), ("46.886", "matrículas en 2025"), ("4,8 / 5", "satisfacción promedio de 15.731 participantes")],
-        "fmm_src": "Fuente: Fundación Manuel Mejía, Informe de Gestión 2025.",
+        "facts": [("+700.000", "caficultores acompañados en más de 60 años"), ("163.861", "participantes en formación presencial desde 2010, de 32 departamentos y 7 países"), ("19.406", "estudiantes formados en 2025"), ("4,8 / 5", "satisfacción promedio de 15.731 participantes")],
+        "tab_sede": "La sede en Chinchiná",
+        "sede_p": "Los programas se viven en la Sede Educativa de la Fundación, en la vereda Quiebra de Naranjal, a 11 km de Chinchiná y a 1.450 metros sobre el nivel del mar: un campus con cafetal propio, aulas, alojamiento y restaurante, en el corazón de la institucionalidad cafetera.",
+        "sede_f": [("213", "camas en 12 cabañas, habitaciones y dormitorios"), ("2,5 ha", "de café con beneficiadero para las prácticas"), ("13 ha", "de ambientes naturales y sendero ecológico"), ("18", "salones de clase y un auditorio para 150 personas"), ("120", "personas por hora en el comedor de la sede"), ("9.725", "participantes atendidos en la sede entre 2019 y 2026")],
+        "near_t": "A pocos kilómetros de",
+        "near": ["Cenicafé", "Buencafé Liofilizado de Colombia", "Parque del Café", "Fincas de Chinchiná"],
+        "sede_src": "Fuente: Fundación Manuel Mejía, Capacidad instalada de la Sede Educativa (2026).",
+        "fmm_src": "Fuente: Fundación Manuel Mejía, Informe de Gestión 2025 e histórico de formación presencial.",
         "f_t": "Fundación Manuel Mejía", "f_x": "Sede educativa en Chinchiná, Caldas, Colombia. Educación para el sector cafetero desde hace más de 60 años.",
         "f_h1": "La Cátedra", "f_x1": "Inmersión cafetera · Programa de campo · Experiencia premium · Semestre con créditos (próximamente)",
         "f_h2": "Con el conocimiento de", "f_x2": "Caficultores de Chinchiná como docentes y expertos de Cenicafé.",
@@ -51,7 +57,7 @@ T = {
         "hero_p": "Aprende el café donde nace: en las fincas de Chinchiná, con caficultores como docentes y con los expertos de Cenicafé. Para universidades internacionales y viajeros que quieren entender el café de verdad.",
         "h_s1": "65 años", "h_l1": "formando al sector cafetero",
         "h_s2": "Caficultores", "h_l2": "pagados como docentes",
-        "h_s3": "Cenicafé", "h_l3": "ciencia del café a 10 minutos",
+        "h_s3": "Cenicafé", "h_l3": "a pocos kilómetros de la sede",
         "steps": ["Elige tu programa", "Configura tu grupo", "Tus datos", "Confirmación"],
         "s1_t": "¿Qué experiencia buscas?", "s1_p": "Tres formatos, un mismo propósito: aprender del café con quienes lo cultivan. Precios en dólares, sin costos ocultos.",
         "per_pax": "por participante", "per_trav": "por viajero",
@@ -124,8 +130,14 @@ T = {
         "fmm_k": "Who we are",
         "fmm_t": "Over 60 years educating Colombia's coffee sector",
         "fmm_p": "Fundación Manuel Mejía has supported Colombian coffee growers and their communities from its campus in Chinchiná, in the heart of the Coffee Cultural Landscape. The Cátedra Cafetera opens that knowledge to universities and travelers from around the world.",
-        "facts": [("700,000+", "coffee growers supported over 60 years"), ("19,406", "students trained in 2025"), ("46,886", "course enrollments in 2025"), ("4.8 / 5", "average satisfaction from 15,731 participants")],
-        "fmm_src": "Source: Fundación Manuel Mejía, 2025 Management Report.",
+        "facts": [("700,000+", "coffee growers supported over 60 years"), ("163,861", "in-person participants since 2010, from 32 departments and 7 countries"), ("19,406", "students trained in 2025"), ("4.8 / 5", "average satisfaction from 15,731 participants")],
+        "tab_sede": "The Chinchiná campus",
+        "sede_p": "Programs take place at the Foundation's campus in the rural district of Quiebra de Naranjal, 11 km from Chinchiná and 1,450 meters above sea level: a campus with its own coffee plot, classrooms, lodging and dining hall, at the heart of Colombia's coffee institutions.",
+        "sede_f": [("213", "beds in 12 cabins, rooms and dormitories"), ("2.5 ha", "of coffee with a wet mill for hands-on practice"), ("13 ha", "of natural learning areas and an ecological trail"), ("18", "classrooms and an auditorium for 150 people"), ("120", "people per hour in the campus dining hall"), ("9,725", "participants hosted on campus from 2019 to 2026")],
+        "near_t": "A few kilometers from",
+        "near": ["Cenicafé", "Buencafé Liofilizado de Colombia", "Parque del Café", "Chinchiná coffee farms"],
+        "sede_src": "Source: Fundación Manuel Mejía, Installed capacity of the Educational Campus (2026).",
+        "fmm_src": "Source: Fundación Manuel Mejía, 2025 Management Report and in-person training records.",
         "f_t": "Fundación Manuel Mejía", "f_x": "Campus in Chinchiná, Caldas, Colombia. Education for the coffee sector for over 60 years.",
         "f_h1": "The Cátedra", "f_x1": "Coffee immersion · Field program · Premium experience · Semester with credits (coming soon)",
         "f_h2": "With the knowledge of", "f_x2": "Chinchiná coffee growers as teachers and the experts of Cenicafé.",
@@ -136,7 +148,7 @@ T = {
         "hero_p": "Learn coffee where it is born: on the farms of Chinchiná, with coffee growers as teachers and the scientists of Cenicafé. For international universities and travelers who want to truly understand coffee.",
         "h_s1": "65 years", "h_l1": "training the coffee sector",
         "h_s2": "Coffee growers", "h_l2": "paid as teachers",
-        "h_s3": "Cenicafé", "h_l3": "coffee science 10 minutes away",
+        "h_s3": "Cenicafé", "h_l3": "a few kilometers from campus",
         "steps": ["Choose your program", "Set up your group", "Your details", "Confirmation"],
         "s1_t": "What experience are you looking for?", "s1_p": "Three formats, one purpose: learning coffee from the people who grow it. Prices in US dollars, no hidden costs.",
         "per_pax": "per participant", "per_trav": "per traveler",
@@ -249,7 +261,8 @@ H("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 :root{--paper:#fbf8f3;--white:#ffffff;--sand:#f1e9dd;--ink:#1f1a16;--ink2:#5f544b;--mute:#8a7e73;--line:#e4dccf;--coffee:#2a1d15;--accent:#8a3b1e;--accent2:#6f2f17;--leaf:#2f5d3a;--gold:#b08a4f;}
-html, body, .stApp, .stMarkdown, button, input, textarea, select, label, p, li, span, div{font-family:'Source Sans 3',-apple-system,'Segoe UI',sans-serif !important;}
+html, body, .stApp, .stMarkdown, button, input, textarea, select, label, p, li{font-family:'Source Sans 3',-apple-system,'Segoe UI',sans-serif !important;}
+[data-testid="stIconMaterial"], .material-symbols-rounded{font-family:'Material Symbols Rounded' !important;}
 .stApp{background:var(--paper);}
 #MainMenu, footer, header[data-testid="stHeader"]{visibility:hidden;height:0;}
 .block-container{padding-top:0;padding-bottom:3rem;max-width:1180px;}
@@ -354,7 +367,23 @@ div[data-baseweb="input"], div[data-baseweb="select"]>div, div[data-baseweb="tex
 .stTabs [data-baseweb="tab-list"]{gap:24px;border-bottom:1px solid var(--line)}
 .stTabs [data-baseweb="tab"]{background:transparent;padding:10px 0;font-weight:600;font-size:16px}
 div[data-testid="stExpander"]{background:var(--white);border-radius:4px;border:1px solid var(--line)}
-div[data-testid="stExpander"] summary p{font-size:16px;font-weight:600}
+.faq{border-top:1px solid var(--line);margin-top:6px}
+.faq details{border-bottom:1px solid var(--line);background:transparent;transition:background .15s ease}
+.faq details[open]{background:var(--white)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 8px;font-family:'Source Serif 4',Georgia,serif !important;font-size:19px;font-weight:600;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--accent)}
+.faq .pm{flex:none;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;position:relative;background:var(--white)}
+.faq .pm:before, .faq .pm:after{content:"";position:absolute;left:8px;right:8px;top:13px;height:1.5px;background:var(--accent);transition:transform .2s ease}
+.faq .pm:after{transform:rotate(90deg)}
+.faq details[open] .pm:after{transform:rotate(0deg)}
+.faq details[open] .pm{border-color:var(--accent)}
+.faq .ans{padding:0 64px 22px 8px;font-size:16px;line-height:1.65;color:var(--ink2) !important;max-width:860px}
+.sede{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:8px}
+.sede .fact{background:var(--white)}
+.near{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px}
+.near span{font-size:14.5px;padding:7px 14px;border:1px solid var(--line);border-radius:3px;background:var(--white);color:var(--ink) !important}
+.sede-p{font-size:16px;line-height:1.6;color:var(--ink2) !important;max-width:860px;margin:4px 0 14px}
 @media (max-width: 760px){.hero{padding:36px 24px}.hero h1{font-size:40px}.fmm,.foot{grid-template-columns:1fr}.hstat{border-right:none;margin-bottom:12px}.st{min-width:46%}}
 </style>
 """)
@@ -435,7 +464,7 @@ if ss.step == 1:
     H(f"""<div class="soon"><div><b>{t('soon_t')}</b><br><span class="p">{t('soon_p')}</span></div><span class="tag">{t('soon_b')}</span></div>""")
 
     H(f'<div class="sec-t" style="font-size:24px;margin-top:34px">{t("explore")}</div>')
-    tab1, tab2, tab3 = st.tabs([t("tab_cmp"), t("tab_it"), t("tab_faq")])
+    tab1, tab2, tab4, tab3 = st.tabs([t("tab_cmp"), t("tab_it"), t("tab_sede"), t("tab_faq")])
     with tab1:
         rows = t("cmp_rows")
         vals = {k: [f"{PKGS[k]['days']} {t('days')}", usd(PKGS[k]["price"]), t("size_" + k), t("lodg_" + k), str(PKGS[k]["fincas"]), str(PKGS[k]["experts"]),
@@ -449,10 +478,14 @@ if ss.step == 1:
         pick = st.radio(t("it_pick"), list(PKGS), format_func=lambda k: names[k], horizontal=True, key="itpick")
         tl = '<div class="tl">' + "".join(f'<div class="it"><div class="k">{a}</div><b>{b}</b><span>{c}</span></div>' for a, b, c in t("it_" + pick)) + "</div>"
         H(tl)
+    with tab4:
+        cells = "".join(f'<div class="fact"><b>{n}</b><span>{l}</span></div>' for n, l in t("sede_f"))
+        near = "".join(f"<span>{x}</span>" for x in t("near"))
+        H(f"""<div class="sede-p">{t('sede_p')}</div><div class="sede">{cells}</div>
+<div class="fsrc" style="margin-top:22px;font-weight:600;color:var(--ink2)">{t('near_t')}</div><div class="near">{near}</div>
+<div class="fsrc">{t('sede_src')}</div>""")
     with tab3:
-        for q, a in t("faq"):
-            with st.expander(q):
-                st.write(a)
+        H('<div class="faq">' + "".join(f'<details><summary>{q}<span class="pm"></span></summary><div class="ans">{a}</div></details>' for q, a in t("faq")) + "</div>")
 
 # ---------------------------------------------------------------------------
 # Paso 2: configuración
